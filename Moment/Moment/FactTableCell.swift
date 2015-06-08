@@ -10,9 +10,9 @@ import UIKit
 
 class FactTableCell: UITableViewCell {
     
-    @IBOutlet weak var title: UILabel!
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var title: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,8 +24,8 @@ class FactTableCell: UITableViewCell {
         self.title.text = fact.title
         self.content.text = fact.content
         if let imageUrl = fact.image {
-            self.imageView?.sd_setImageWithURL(NSURL(string: imageUrl))
-            self.imageView?.contentMode = .ScaleAspectFill
+            self.avatar.sd_setImageWithURL(NSURL(string: imageUrl))
+            self.avatar.contentMode = .ScaleAspectFill
         }
     }
 }
