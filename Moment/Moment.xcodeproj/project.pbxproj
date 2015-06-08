@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DB112F5DB502626CE5439E2 /* Pods_Moment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8FAD80374B7C6026977D49 /* Pods_Moment.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		356FB4801B21831A00654D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FB47F1B21831A00654D98 /* AppDelegate.swift */; };
 		356FB4821B21831A00654D98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FB4811B21831A00654D98 /* ViewController.swift */; };
 		356FB4851B21831A00654D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356FB4831B21831A00654D98 /* Main.storyboard */; };
 		356FB4871B21831A00654D98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356FB4861B21831A00654D98 /* Images.xcassets */; };
 		356FB48A1B21831A00654D98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356FB4881B21831A00654D98 /* LaunchScreen.xib */; };
 		356FB4961B21831A00654D98 /* MomentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FB4951B21831A00654D98 /* MomentTests.swift */; };
+		356FB4A01B21938600654D98 /* facts.json in Resources */ = {isa = PBXBuildFile; fileRef = 356FB49F1B21938600654D98 /* facts.json */; };
+		356FB4A31B21969C00654D98 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FB4A21B21969C00654D98 /* Fact.swift */; };
+		356FB4A71B24A33600654D98 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FB4A61B24A33600654D98 /* SwiftyJSON.swift */; };
+		356FB4A91B25295900654D98 /* FactTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FB4A81B25295900654D98 /* FactTableCell.swift */; };
+		62822CDE62E45D24160189CF /* libPods-Moment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4018F929F0652C27332A1A /* libPods-Moment.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +41,13 @@
 		356FB48F1B21831A00654D98 /* MomentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MomentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		356FB4941B21831A00654D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		356FB4951B21831A00654D98 /* MomentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentTests.swift; sourceTree = "<group>"; };
+		356FB49F1B21938600654D98 /* facts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = facts.json; sourceTree = "<group>"; };
+		356FB4A21B21969C00654D98 /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		356FB4A61B24A33600654D98 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		356FB4A81B25295900654D98 /* FactTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactTableCell.swift; sourceTree = "<group>"; };
+		356FB4AA1B25338400654D98 /* Moment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Moment-Bridging-Header.h"; sourceTree = "<group>"; };
 		8B3FC5DFC333CE8F22CEBD2A /* Pods-Moment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moment/Pods-Moment.debug.xcconfig"; sourceTree = "<group>"; };
-		8D8FAD80374B7C6026977D49 /* Pods_Moment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE4018F929F0652C27332A1A /* libPods-Moment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Moment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4226CBACBD278DED811781C /* Pods-Moment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moment/Pods-Moment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DB112F5DB502626CE5439E2 /* Pods_Moment.framework in Frameworks */,
+				62822CDE62E45D24160189CF /* libPods-Moment.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,12 +93,16 @@
 		356FB47C1B21831A00654D98 /* Moment */ = {
 			isa = PBXGroup;
 			children = (
+				356FB4A11B21961200654D98 /* models */,
 				356FB47F1B21831A00654D98 /* AppDelegate.swift */,
 				356FB4811B21831A00654D98 /* ViewController.swift */,
 				356FB4831B21831A00654D98 /* Main.storyboard */,
 				356FB4861B21831A00654D98 /* Images.xcassets */,
 				356FB4881B21831A00654D98 /* LaunchScreen.xib */,
 				356FB47D1B21831A00654D98 /* Supporting Files */,
+				356FB4A61B24A33600654D98 /* SwiftyJSON.swift */,
+				356FB4A81B25295900654D98 /* FactTableCell.swift */,
+				356FB4AA1B25338400654D98 /* Moment-Bridging-Header.h */,
 			);
 			path = Moment;
 			sourceTree = "<group>";
@@ -97,6 +110,7 @@
 		356FB47D1B21831A00654D98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				356FB49F1B21938600654D98 /* facts.json */,
 				356FB47E1B21831A00654D98 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -119,10 +133,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		356FB4A11B21961200654D98 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				356FB4A21B21969C00654D98 /* Fact.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		BA3C4F380EF3B5596240EDFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8D8FAD80374B7C6026977D49 /* Pods_Moment.framework */,
+				AE4018F929F0652C27332A1A /* libPods-Moment.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,7 +169,6 @@
 				356FB4761B21831A00654D98 /* Sources */,
 				356FB4771B21831A00654D98 /* Frameworks */,
 				356FB4781B21831A00654D98 /* Resources */,
-				4BADEF1AFFB9F35987830289 /* Embed Pods Frameworks */,
 				85666C5DC5D43B6E661125E2 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -222,6 +243,7 @@
 				356FB4851B21831A00654D98 /* Main.storyboard in Resources */,
 				356FB48A1B21831A00654D98 /* LaunchScreen.xib in Resources */,
 				356FB4871B21831A00654D98 /* Images.xcassets in Resources */,
+				356FB4A01B21938600654D98 /* facts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,21 +257,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4BADEF1AFFB9F35987830289 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moment/Pods-Moment-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		85666C5DC5D43B6E661125E2 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -288,7 +295,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				356FB4821B21831A00654D98 /* ViewController.swift in Sources */,
+				356FB4A31B21969C00654D98 /* Fact.swift in Sources */,
 				356FB4801B21831A00654D98 /* AppDelegate.swift in Sources */,
+				356FB4A71B24A33600654D98 /* SwiftyJSON.swift in Sources */,
+				356FB4A91B25295900654D98 /* FactTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +429,7 @@
 				INFOPLIST_FILE = Moment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Moment/Moment-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -430,6 +441,7 @@
 				INFOPLIST_FILE = Moment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Moment/Moment-Bridging-Header.h";
 			};
 			name = Release;
 		};

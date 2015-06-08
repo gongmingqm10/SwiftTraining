@@ -1,9 +1,7 @@
 platform :ios, '8.0'
 
-use_frameworks!
-
 target 'Moment' do
-	pod 'SwiftyJSON', '~> 2.2.0'
+    pod 'SDWebImage', '~> 3.7.2'
 end
 
 target 'MomentTests' do
