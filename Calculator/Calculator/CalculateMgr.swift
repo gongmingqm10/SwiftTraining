@@ -30,7 +30,7 @@ struct Stack<T> {
 
 class CalculateMgr: NSObject {
     
-    let OPERATOR_ADD = "+"
+    let OPERATOR_PLUS = "+"
     let OPERATOR_MINUS = "-"
     let OPERATOR_MULTI = "*"
     let OPERATOR_DIVIDE = "/"
@@ -90,7 +90,7 @@ class CalculateMgr: NSObject {
     }
     
     private func isHigherPriority(operatorStr: String, operatorCompared: String) -> Bool {
-        return (operatorStr == "*" || operatorStr == "/") && (operatorCompared == "+" || operatorCompared == "-")
+        return (operatorStr == OPERATOR_MULTI || operatorStr == OPERATOR_DIVIDE) && (operatorCompared == OPERATOR_PLUS || operatorCompared == OPERATOR_MINUS)
     }
     
     private func expressionCalculate(leftNumber: Float, rightNumber: Float, operatorStr: String) -> Float {
