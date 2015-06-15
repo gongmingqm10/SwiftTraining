@@ -65,14 +65,36 @@ class CalculateMgrTests: XCTestCase {
         XCTAssertEqual(calculateMgr.calculateResult(), 5)
     }
     
-//    func testShouldTwoPlusThreeMultiThreeEqualsEleven() {
-//        let calculateMgr = CalculateMgr()
-//        calculateMgr.pushNumber(2)
-//        calculateMgr.pushOperator("+")
-//        calculateMgr.pushNumber(3)
-//        calculateMgr.pushOperator("*")
-//        calculateMgr.pushNumber(3)
-//        
-//        XCTAssertEqual(calculateMgr.calculateResult(), 11)
-//    }
+    func testShouldTwoPlusThreeMultiThreeEqualsEleven() {
+        let calculateMgr = CalculateMgr()
+        calculateMgr.pushNumber(2)
+        calculateMgr.pushOperator("+")
+        calculateMgr.pushNumber(3)
+        calculateMgr.pushOperator("*")
+        calculateMgr.pushNumber(3)
+        
+        XCTAssertEqual(calculateMgr.calculateResult(), 11)
+    }
+    
+    func testShouldSixMinusThreePlusEightEqualsEleven() {
+        let calculateMgr = CalculateMgr()
+        calculateMgr.pushNumber(6)
+        calculateMgr.pushOperator("-")
+        calculateMgr.pushNumber(3)
+        calculateMgr.pushOperator("+")
+        calculateMgr.pushNumber(8)
+        
+        XCTAssertEqual(calculateMgr.calculateResult(), 11)
+    }
+    
+    func testShouldSixDivideTwoMultiTwoEqualsSix() {
+        let calculateMgr = CalculateMgr()
+        calculateMgr.pushNumber(6)
+        calculateMgr.pushOperator("/")
+        calculateMgr.pushNumber(2)
+        calculateMgr.pushOperator("*")
+        calculateMgr.pushNumber(2)
+        
+        XCTAssertEqual(calculateMgr.calculateResult(), 6)
+    }
 }

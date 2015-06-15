@@ -12,6 +12,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
     
+    let calculatorMgr = CalculateMgr()
+    
+    var lastIsOperator = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,6 +28,8 @@ class ViewController: UIViewController {
 
     @IBAction func clearInput(sender: AnyObject) {
         resultLabel.text = "0"
+        lastIsOperator = false
+        calculatorMgr.clear()
     }
 
     @IBAction func oppositeClick(sender: AnyObject) {
@@ -42,7 +48,7 @@ class ViewController: UIViewController {
     
     @IBAction func pointClick(sender: AnyObject) {
         if resultLabel.text?.rangeOfString(".") == nil {
-            inputNumber(".")
+            resultLabel.text = resultLabel.text! + "."
         }
     }
     
@@ -83,31 +89,62 @@ class ViewController: UIViewController {
     }
     
     @IBAction func divideOperatorClick(sender: AnyObject) {
+        inputOperator("/")
     }
     
     @IBAction func multiOperatorClick(sender: AnyObject) {
+        inputOperator("*")
     }
     
     @IBAction func minusOperatorClick(sender: AnyObject) {
+        inputOperator("-")
     }
     
     @IBAction func addOperatorClick(sender: AnyObject) {
+        inputOperator("+")
     }
     
     @IBAction func calculateResult(sender: AnyObject) {
+        inputOperator("=")
+    }
+    
+    private func inputOperator(input: String) {
+        let resultLabelNumber = (resultLabel.text! as NSString).floatValue
+        calculatorMgr.pushNumber(resultLabelNumber)
+        lastIsOperator = true
+
+        if "=" == input {
+            updateLabelText(formatFloatResult(calculatorMgr.calculateResult()))
+        } else {
+            updateLabelText(formatFloatResult(calculatorMgr.pushOperator(input)))
+        }
     }
     
     private func inputNumber(input: String) {
         let resultLabelValue = resultLabel.text
-        if "0" == resultLabelValue && "." != input {
-            resultLabel.text = input
+        if lastIsOperator || resultLabelValue == "0" {
+            updateLabelText(input)
         } else {
             resultLabel.text = resultLabelValue! + input
         }
+        lastIsOperator = false
     }
     
+    private func updateLabelText(text: String) {
+        resultLabel.fadeOut(completion: {
+            (finished: Bool) -> Void in
+            self.resultLabel.text = text
+            self.resultLabel.fadeIn()
+        })
+    }
     
-    
+    private func formatFloatResult(result: Float) -> String {
+        var resultStr = result.description
+        if resultStr.endsWith(".0") {
+            resultStr.removeCharsFromEnd(2)
+        }
+        return resultStr
+    }
     
 }
 

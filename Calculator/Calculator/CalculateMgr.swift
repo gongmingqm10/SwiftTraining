@@ -22,9 +22,18 @@ struct Stack<T> {
     func lastElement() -> T {
         return items.last!
     }
+    func isEmpty() -> Bool {
+        return items.isEmpty
+    }
+    
 }
 
 class CalculateMgr: NSObject {
+    
+    let OPERATOR_ADD = "+"
+    let OPERATOR_MINUS = "-"
+    let OPERATOR_MULTI = "*"
+    let OPERATOR_DIVIDE = "/"
     
     var numberStack =  Stack<Float>()
     var operatorStack = Stack<String>()
@@ -40,9 +49,15 @@ class CalculateMgr: NSObject {
         if isOperator {
             operatorStack.pop()
         }
+        var result: Float = numberStack.isEmpty() ? 0 : numberStack.lastElement()
+        if !(operatorStack.isEmpty() || isHigherPriority(item, operatorCompared: operatorStack.lastElement())) {
+            result = calculateResult()
+            numberStack.push(result)
+        }
+        
         operatorStack.push(item)
         isOperator = true
-        return 0
+        return result
     }
     
     func pushNumber(number: Float) {
@@ -59,9 +74,8 @@ class CalculateMgr: NSObject {
         let firstNumber = numberStack.pop()
         let secondNumber = numberStack.pop()
         let currentOperator = operatorStack.pop()
-        let lastOperator = operatorStack.lastElement()
 
-        if isHigherPriority(lastOperator, operatorCompared: currentOperator) {
+        if !operatorStack.isEmpty() && isHigherPriority(operatorStack.lastElement(), operatorCompared: currentOperator) {
             let thirdNumber = numberStack.pop()
             let result = expressionCalculate(thirdNumber, rightNumber: secondNumber, operatorStr: operatorStack.pop())
             numberStack.push(result)
@@ -76,17 +90,16 @@ class CalculateMgr: NSObject {
     }
     
     private func isHigherPriority(operatorStr: String, operatorCompared: String) -> Bool {
-        
         return (operatorStr == "*" || operatorStr == "/") && (operatorCompared == "+" || operatorCompared == "-")
     }
     
     private func expressionCalculate(leftNumber: Float, rightNumber: Float, operatorStr: String) -> Float {
         switch operatorStr {
-        case "-":
+        case OPERATOR_MINUS:
             return leftNumber - rightNumber
-        case "*":
+        case OPERATOR_MULTI:
             return leftNumber * rightNumber
-        case "/":
+        case OPERATOR_DIVIDE:
             return leftNumber / rightNumber
         default:
             return leftNumber + rightNumber
