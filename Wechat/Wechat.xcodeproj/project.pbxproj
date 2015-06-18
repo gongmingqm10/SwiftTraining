@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3502E92F1B32AD5100D6BB43 /* MomentDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502E92E1B32AD5100D6BB43 /* MomentDetailController.swift */; };
 		350AB9C21B32658D009C048F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350AB9C11B32658D009C048F /* AppDelegate.swift */; };
 		350AB9C41B32658D009C048F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350AB9C31B32658D009C048F /* ViewController.swift */; };
 		350AB9C71B32658D009C048F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350AB9C51B32658D009C048F /* Main.storyboard */; };
@@ -14,7 +15,10 @@
 		350AB9CC1B32658D009C048F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350AB9CA1B32658D009C048F /* LaunchScreen.storyboard */; };
 		350AB9D71B32658D009C048F /* WechatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350AB9D61B32658D009C048F /* WechatTests.swift */; };
 		350AB9E21B32658D009C048F /* WechatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350AB9E11B32658D009C048F /* WechatUITests.swift */; };
-		A3D351BE90D80B9EF4D92A49 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D0BF67E24BFD8D8271FF29 /* libPods.a */; };
+		350AB9F11B326E64009C048F /* facts-sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 350AB9F01B326E64009C048F /* facts-sample.json */; };
+		350AB9F31B326F1B009C048F /* MomentTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350AB9F21B326F1B009C048F /* MomentTableCell.swift */; };
+		35E0D27F1B32740300418359 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0D27E1B32740300418359 /* Moment.swift */; };
+		3AC2009FEC56C392460BDA45 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D5A09E932F26B3CD1D6DB4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02D0BF67E24BFD8D8271FF29 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		08D5A09E932F26B3CD1D6DB4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B2122D84FDECC7DC9A777B4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3502E92E1B32AD5100D6BB43 /* MomentDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentDetailController.swift; sourceTree = "<group>"; };
 		350AB9BE1B32658D009C048F /* Wechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		350AB9C11B32658D009C048F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		350AB9C31B32658D009C048F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +56,9 @@
 		350AB9E11B32658D009C048F /* WechatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechatUITests.swift; sourceTree = "<group>"; };
 		350AB9E31B32658D009C048F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		350AB9EF1B326612009C048F /* Wechat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wechat-Bridging-Header.h"; sourceTree = "<group>"; };
+		350AB9F01B326E64009C048F /* facts-sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "facts-sample.json"; sourceTree = "<group>"; };
+		350AB9F21B326F1B009C048F /* MomentTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentTableCell.swift; sourceTree = "<group>"; };
+		35E0D27E1B32740300418359 /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
 		3E15D475D4AE5F9CAB994369 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3D351BE90D80B9EF4D92A49 /* libPods.a in Frameworks */,
+				3AC2009FEC56C392460BDA45 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +91,7 @@
 		13BED52337827ADEB73D53CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				02D0BF67E24BFD8D8271FF29 /* libPods.a */,
+				08D5A09E932F26B3CD1D6DB4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,6 +121,7 @@
 		350AB9C01B32658D009C048F /* Wechat */ = {
 			isa = PBXGroup;
 			children = (
+				350AB9F01B326E64009C048F /* facts-sample.json */,
 				350AB9C11B32658D009C048F /* AppDelegate.swift */,
 				350AB9C31B32658D009C048F /* ViewController.swift */,
 				350AB9C51B32658D009C048F /* Main.storyboard */,
@@ -120,6 +129,9 @@
 				350AB9CA1B32658D009C048F /* LaunchScreen.storyboard */,
 				350AB9CD1B32658D009C048F /* Info.plist */,
 				350AB9EF1B326612009C048F /* Wechat-Bridging-Header.h */,
+				350AB9F21B326F1B009C048F /* MomentTableCell.swift */,
+				35E0D27E1B32740300418359 /* Moment.swift */,
+				3502E92E1B32AD5100D6BB43 /* MomentDetailController.swift */,
 			);
 			path = Wechat;
 			sourceTree = "<group>";
@@ -258,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				350AB9CC1B32658D009C048F /* LaunchScreen.storyboard in Resources */,
+				350AB9F11B326E64009C048F /* facts-sample.json in Resources */,
 				350AB9C91B32658D009C048F /* Assets.xcassets in Resources */,
 				350AB9C71B32658D009C048F /* Main.storyboard in Resources */,
 			);
@@ -317,8 +330,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3502E92F1B32AD5100D6BB43 /* MomentDetailController.swift in Sources */,
+				350AB9F31B326F1B009C048F /* MomentTableCell.swift in Sources */,
 				350AB9C41B32658D009C048F /* ViewController.swift in Sources */,
 				350AB9C21B32658D009C048F /* AppDelegate.swift in Sources */,
+				35E0D27F1B32740300418359 /* Moment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.gongmingqm10.Wechat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Wechat/Wechat-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -475,6 +492,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.gongmingqm10.Wechat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Wechat/Wechat-Bridging-Header.h";
 			};
 			name = Release;
 		};
