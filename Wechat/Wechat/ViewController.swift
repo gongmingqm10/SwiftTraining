@@ -65,7 +65,7 @@ class ViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == momentDetailSegue {
             let navigationController = segue.destinationViewController as! UINavigationController
-            let momentDetailController = navigationController.viewControllers[0] as! MomentDetailController
+            let momentDetailController = navigationController.viewControllers.first as! MomentDetailController
             momentDetailController.moment = selectedMoment
         }
     }
