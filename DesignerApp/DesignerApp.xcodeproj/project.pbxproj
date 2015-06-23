@@ -19,6 +19,7 @@
 		355AA2411B33E2B10063036E /* DesignTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355AA2401B33E2B10063036E /* DesignTextField.swift */; };
 		355AA2431B33FEE90063036E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355AA2421B33FEE90063036E /* MenuViewController.swift */; };
 		355AA2451B3408550063036E /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355AA2441B3408550063036E /* LearnViewController.swift */; };
+		35F317B11B392B6A0064B26A /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F317B01B392B6A0064B26A /* UserDefaultManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		355AA2401B33E2B10063036E /* DesignTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignTextField.swift; sourceTree = "<group>"; };
 		355AA2421B33FEE90063036E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		355AA2441B3408550063036E /* LearnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
+		35F317B01B392B6A0064B26A /* UserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		90440FF6100A162A442FF978 /* Pods-DesignerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignerApp/Pods-DesignerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A11776FDB049216D5E3A6D52 /* libPods-DesignerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 		3502E93B1B32C86F00D6BB43 /* DesignerApp */ = {
 			isa = PBXGroup;
 			children = (
+				35F317AD1B392AE70064B26A /* data */,
 				355AA23F1B33E2540063036E /* views */,
 				3502E93C1B32C86F00D6BB43 /* AppDelegate.swift */,
 				3502E93E1B32C86F00D6BB43 /* ViewController.swift */,
@@ -158,6 +161,14 @@
 				355AA2401B33E2B10063036E /* DesignTextField.swift */,
 			);
 			name = views;
+			sourceTree = "<group>";
+		};
+		35F317AD1B392AE70064B26A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				35F317B01B392B6A0064B26A /* UserDefaultManager.swift */,
+			);
+			name = data;
 			sourceTree = "<group>";
 		};
 		4142F05B5284608D770DAF84 /* Pods */ = {
@@ -349,6 +360,7 @@
 				3502E93D1B32C86F00D6BB43 /* AppDelegate.swift in Sources */,
 				355AA2411B33E2B10063036E /* DesignTextField.swift in Sources */,
 				355AA2451B3408550063036E /* LearnViewController.swift in Sources */,
+				35F317B11B392B6A0064B26A /* UserDefaultManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
