@@ -1,0 +1,15 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'DesignerApp' do
+  pod 'SDWebImage', '~>3.7.2'
+end
+
+target 'DesignerAppTests' do
+
+end
+
+target 'DesignerAppUITests' do
+
+end
+
