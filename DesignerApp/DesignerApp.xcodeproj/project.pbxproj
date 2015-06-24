@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		28068867C2C775E370058BE3 /* libPods-DesignerApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A11776FDB049216D5E3A6D52 /* libPods-DesignerApp.a */; };
 		3502E93D1B32C86F00D6BB43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502E93C1B32C86F00D6BB43 /* AppDelegate.swift */; };
 		3502E93F1B32C86F00D6BB43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502E93E1B32C86F00D6BB43 /* ViewController.swift */; };
 		3502E9421B32C86F00D6BB43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3502E9401B32C86F00D6BB43 /* Main.storyboard */; };
@@ -20,6 +19,11 @@
 		355AA2431B33FEE90063036E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355AA2421B33FEE90063036E /* MenuViewController.swift */; };
 		355AA2451B3408550063036E /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355AA2441B3408550063036E /* LearnViewController.swift */; };
 		35F317B11B392B6A0064B26A /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F317B01B392B6A0064B26A /* UserDefaultManager.swift */; };
+		35F317B31B395D090064B26A /* TopStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F317B21B395D090064B26A /* TopStoriesViewController.swift */; };
+		35F317B51B3963C20064B26A /* CommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F317B41B3963C20064B26A /* CommentTableViewController.swift */; };
+		35FDFB991B399FE1003C0AD3 /* libPods-DesignerApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35FDFB981B399FE1003C0AD3 /* libPods-DesignerApp.a */; };
+		35FDFB9B1B3A36E4003C0AD3 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FDFB9A1B3A36E3003C0AD3 /* StoryTableViewCell.swift */; };
+		35FDFB9E1B3A3EFF003C0AD3 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FDFB9D1B3A3EFF003C0AD3 /* Story.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,11 @@
 		355AA2421B33FEE90063036E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		355AA2441B3408550063036E /* LearnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		35F317B01B392B6A0064B26A /* UserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		35F317B21B395D090064B26A /* TopStoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopStoriesViewController.swift; sourceTree = "<group>"; };
+		35F317B41B3963C20064B26A /* CommentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewController.swift; sourceTree = "<group>"; };
+		35FDFB981B399FE1003C0AD3 /* libPods-DesignerApp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-DesignerApp.a"; path = "Pods/../build/Debug-iphoneos/libPods-DesignerApp.a"; sourceTree = "<group>"; };
+		35FDFB9A1B3A36E3003C0AD3 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
+		35FDFB9D1B3A3EFF003C0AD3 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		90440FF6100A162A442FF978 /* Pods-DesignerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignerApp/Pods-DesignerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A11776FDB049216D5E3A6D52 /* libPods-DesignerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -68,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28068867C2C775E370058BE3 /* libPods-DesignerApp.a in Frameworks */,
+				35FDFB991B399FE1003C0AD3 /* libPods-DesignerApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +160,8 @@
 				355AA23D1B33BEEE0063036E /* LoginViewController.swift */,
 				355AA2421B33FEE90063036E /* MenuViewController.swift */,
 				355AA2441B3408550063036E /* LearnViewController.swift */,
+				35F317B21B395D090064B26A /* TopStoriesViewController.swift */,
+				35F317B41B3963C20064B26A /* CommentTableViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -159,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				355AA2401B33E2B10063036E /* DesignTextField.swift */,
+				35FDFB9A1B3A36E3003C0AD3 /* StoryTableViewCell.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -166,9 +178,18 @@
 		35F317AD1B392AE70064B26A /* data */ = {
 			isa = PBXGroup;
 			children = (
+				35FDFB9C1B3A3EF4003C0AD3 /* models */,
 				35F317B01B392B6A0064B26A /* UserDefaultManager.swift */,
 			);
 			name = data;
+			sourceTree = "<group>";
+		};
+		35FDFB9C1B3A3EF4003C0AD3 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				35FDFB9D1B3A3EFF003C0AD3 /* Story.swift */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 		4142F05B5284608D770DAF84 /* Pods */ = {
@@ -183,6 +204,7 @@
 		D0C8205CF3BED03D79ADD445 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35FDFB981B399FE1003C0AD3 /* libPods-DesignerApp.a */,
 				A11776FDB049216D5E3A6D52 /* libPods-DesignerApp.a */,
 			);
 			name = Frameworks;
@@ -354,13 +376,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F317B51B3963C20064B26A /* CommentTableViewController.swift in Sources */,
 				355AA23E1B33BEEE0063036E /* LoginViewController.swift in Sources */,
 				355AA2431B33FEE90063036E /* MenuViewController.swift in Sources */,
 				3502E93F1B32C86F00D6BB43 /* ViewController.swift in Sources */,
 				3502E93D1B32C86F00D6BB43 /* AppDelegate.swift in Sources */,
+				35F317B31B395D090064B26A /* TopStoriesViewController.swift in Sources */,
 				355AA2411B33E2B10063036E /* DesignTextField.swift in Sources */,
 				355AA2451B3408550063036E /* LearnViewController.swift in Sources */,
 				35F317B11B392B6A0064B26A /* UserDefaultManager.swift in Sources */,
+				35FDFB9B1B3A36E4003C0AD3 /* StoryTableViewCell.swift in Sources */,
+				35FDFB9E1B3A3EFF003C0AD3 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
