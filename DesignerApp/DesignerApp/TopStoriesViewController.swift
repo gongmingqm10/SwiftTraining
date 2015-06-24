@@ -35,7 +35,6 @@ class TopStoriesViewController: UITableViewController {
         let titles = ["Designing For (and With) Color Blindness", "Apple's Indies", "Show DN: We made Boomstat.works", "Site Design: The Obtuse Triangle", "Dropbox-Material Design", "Folyo is joining Workshop", "Designer News Digest"]
         let authors = ["Ming Gong", "Andrew", "Angel", "Jered", "Ao Zhu", "Sarah", "Mengto"]
         
-        
         for _ in 0...20 {
             let story = Story(json: [
                 "title": titles[Int(arc4random_uniform(UInt32(titles.count)))],

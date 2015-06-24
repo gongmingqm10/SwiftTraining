@@ -32,9 +32,11 @@ class StoryTableViewCell: UITableViewCell {
     
     
     @IBAction func voteAction(sender: AnyObject) {
+        print("Vote action clicked")
     }
     
     @IBAction func commentAction(sender: AnyObject) {
+        print("Comment action clicked")
     }
     
 }
